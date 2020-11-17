@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/Root';
+import {fetchGifs} from './util/apiUtil';
+
 
 ReactDOM.render(
   <React.StrictMode>
