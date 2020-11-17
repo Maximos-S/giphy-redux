@@ -3,6 +3,7 @@ import React from "react";
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
     this.state = {
       inputValue: '',
     };
@@ -13,9 +14,13 @@ class SearchBar extends React.Component {
   }
 
   // TODO: Create an `onSubmit` handler for your search form.
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.fetchGifs(this.state.inputValue)
+  }
     // TODO: Prevent the default action of a submit event
     // TODO: Dispatch the `fetchGifs` function
-  
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
